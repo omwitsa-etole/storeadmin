@@ -1,4 +1,4 @@
-{"MONGO_URL":"mongodb://127.0.0.1:27017/shoestore",
+{"MONGO_URL":"mongodb+srv://etolebradone:lovingson23@cluster0.pjipfgw.mongodb.net/shoestore",
     "PASS_SEC":"secret",
     "JWT_SEC":"secret"
 }
