@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html ng-app>
+   <head>
+    <meta name="description" content="School Management System">
+    <meta name="keywords" content="school System">
+    
+    <meta name="author:" content="Et">
+    <link rel="shortcut icon" href="/img/logo.ico">
+    
+	<link rel="stylesheet" href="/finance_files/vendor-0eade7d9490cb657347e8219d2a4e785.css" integrity="" type="text/css">
+
+    <link rel="stylesheet" href="/finance_files/webapp-8a0cee2c8c0e5ff3b773a66185e55ed3.css" integrity="" type="text/css">
+	<link rel="stylesheet" href="/css/hilmacs.css" type="text/css"/>
+	<title> Products </title>
+	
+   </head>
+   <body>
+
+<div  >
+	<div id="content" class="app-content ng-scope"  role="main" ui-view="content@"><div class="box ng-scope">
+		  <!-- hilmacs Content Navbar -->
+		  <div w3-include-html="/templates/navTop" class="hm-nav-bar-top">&nbsp;</div>
+		  <!-- Content -->
+		  <div class="box-row">
+			<div class="box-cell">
+			  <!-- uiView:  --><div class="box-inner padding ng-scope" ui-view="" id="view"><!-- uiView:  --><div ui-view="" class="ng-scope">
+			<div class="row ng-scope">
+					<div class="col-md-3 hm-nav-bar-aside">
+						<div class="col-sm-12">
+						  <h5 class="no-margin m-b b">
+							Section overview</h5>
+						  <div class="list-group list-group-gap">
+							<a href="/superuser" class="list-group-item md-whiteframe-z1">
+							  <span class="mdi-action-home pull-left"></span><span  class="margin-3 lc-nav-home">  Home </span>
+							</a>
+							<a href="/products"  class="list-group-item md-whiteframe-z0 bd-l-red">
+							  <span class="mdi-exit pull-left"></span><span  class="margin-3 lc-nav-cprofile">   Products </span> <span class="mdi-toggle-radio-button-on text-danger pull-right"></span>
+							</a>
+							<a href="/orders"  class="list-group-item md-whiteframe-z0">
+							  <span class="mdi-exit pull-left"></span><span  class="margin-3 lc-nav-cprofile">   Orders </span> </span>
+							</a>
+							<a href="/settings/company"  class="list-group-item md-whiteframe-z0 ">
+							  <span class="mdi-av-equalizer pull-left"></span><span  class="margin-3 lc-nav-cprofile">   Company Profile </span> </span>
+							</a>
+							<a href="/logout"  class="list-group-item md-whiteframe-z0">
+							  <span class="mdi-exit pull-left"></span><span  class="margin-3 lc-nav-cprofile">   Logout </span> </span>
+							</a>
+						  </div>
+						</div>
+					</div>
+					<div class="col-md-9 hm-c-1">
+						<span class="hm-data-a-auto-save save-ansyc hm-disp-off-5 pull-right ">
+						  <button type="button" class="btn btn-success hm-data-a-auto-save-btn" data-toggle="modal" data-target="#hm-modal-s1">
+							 <span > New Category</span>
+						  </button>
+						</span>
+						<div class="row">
+							<h5 class="text-left b">Title</h5>
+							<div class="panel panel-default ng-scope">
+							   <div class="panel-heading">
+								 Products &amp; Detail
+							   </div>
+							   <div class="panel-body">
+								 <button type="button" data-toggle="modal" data-target="#hm-modal-e1" class="btn btn-sm btn-success" tabindex="0">
+								   <i class="glyphicon glyphicon-plus">
+								   </i> Add product
+								 </button>
+			   
+								 <div class="modal " id="hm-modal-e1" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+								   <div class="modal-dialog">
+									 <div class="modal-content">
+									   <div class="modal-header">
+										 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+										 <h4 class="modal-title" id="">Add a new Product</h4>
+									   </div>
+									   <div class="modal-body">
+										 <div class="form-group">
+										   <div class="input-group">
+											 <span class="input-group-addon bg-info">Name</span>
+											 <input type="text" maxlength="125" class="form-control hm-inpt-modal-e1" placeholder="ie: New Item">
+										   </div><br>
+										   <div class="input-group">
+											 <span class="input-group-addon bg-info"><abbr title="">Image</abbr></span>
+											 <input type="file" class="form-control hm-inpt-modal-e2 " placeholder="ie: Image File">
+										   </div><br>
+										   <div class="input-group">
+											 <span class="input-group-addon bg-info"><abbr title="">Units</abbr></span>
+											 <input type="number" class="form-control hm-inpt-modal-e3 " placeholder="ie: Available">
+										   </div>
+										 </div>
+										 <div class="form-group">
+											<label for="">Description</label>
+											<textarea id="textarea-modal"></textarea>
+										  </div>
+										 <div class="form-group">
+										  <label for="">Select Category</label>
+										  <select class="form-control " id="available-units">
+										   <option>Select</option>
+										  </select>
+			   
+										  <input type="hidden" class="hm-inpt-modal-c2" id="hm-inpt-modal-c2"/>
+										</div>
+										<div class="form-group">
+										
+										  <label for="">Selected Category </label>
+										  
+										  <input type="text" class="form-control" id="selected-units" placeholder="ie: East, West , South..." readonly>
+										</div>
+									   </div>
+									   <div class="modal-footer text-muted">
+										 <button type="button" class="btn btn-default" data-dismiss="modal">Discard</button>
+										 <button type="button" class="btn btn-primary hm-btn-modal-e1 hm-invoke-e1" data-dismiss="modal">Create Product</button>
+									   </div>
+									 </div>
+								   </div>
+								 </div>
+
+								 <div class="modal" id="hm-modal-s1" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+									<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+										<h4 class="modal-title" id="">Create New Category</h4>
+										</div>
+										<div class="modal-body">
+										<div class="form-group">
+											<label for="">Category Name</label>
+											<input type="text" class="form-control hm-inpt-modal-s1" id="" placeholder="art">
+										</div>
+										<div class="form-group">
+											<label for="">Parent Category <small>(optional )</small></label>
+											<input type="text" class="form-control hm-inpt-modal-s2" id="" placeholder="ie: items">
+										</div>
+										</div>
+										<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										<button type="button" class="btn btn-primary hm-btn-modal-s1" data-dismiss="modal"> Create Category</button>
+										</div>
+									</div>
+									</div>
+								</div>
+							   </div>
+							   <table st-table="displayedCollection" st-safe-src="rowCollection" class="table table-striped table-bordered">
+								 <thead>
+								   <th>Product Name</th>
+								   <th>Abbreviation</th>
+								   <th>Category</th>
+								   <th>Total Units/Left</th>
+								   <th>Orders</th>
+								   <th>Discard</th>
+								 </thead>
+								 <tbody class="hm-mv-exams">
+								   &nbsp;
+								 </tbody>
+							   </table>
+
+							   <table class="table table-striped table-bordered" style="display:none;">
+								<thead>
+								  <tr class="no-print">
+									<th colspan="7">
+									  <input class="form-control ng-isolate-scope" placeholder="search for subjects" type="text">
+									</th>
+								  </tr>
+								  <tr>
+									<th>Category  Name</th>
+									<th>Parent Category</th>
+									<th>Date Added </th>
+									<th>Modify </th>
+								  </tr>
+								  </thead>
+								  <tbody class="hm-mv-subjects">
+									&nbsp;
+								  </tbody>
+								</table>
+							 </div>
+						  </div>
+					</div>
+				</div>
+			 </div>
+			</div>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>		
+</body>
+<script src="/js/jquery.bundle.js"></script>
+<script src="/css/bootstrap/js/bootstrap.bundle.js"></script>
+<script src="/css/bootstrap/js/bootstrap.min.js"></script>
+
+	
+	<script src="/js/Chart.min.js"></script>
+</html>
